@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DevProfile Analyzer</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans min-h-screen flex flex-col items-center p-6">
+<!-- Navigation Bar -->
+<nav class="w-full bg-gray-900 text-white px-6 py-3 flex justify-between items-center shadow">
+    <div class="text-xl font-bold">DevProfile Analyzer</div>
+    <!-- <input type="text" placeholder="Search" class="p-1 px-3 rounded bg-gray-700 text-white focus:outline-none" /> -->
+    <a href="#" class="text-sm hover:underline">ItzShaidSk</a>
+</nav>
+  <div class="max-w-2xl w-full bg-white shadow-xl rounded-xl p-8 mt-10">
+    <h1 class="text-3xl font-bold text-center text-indigo-600 mb-6">DevProfile Analyzer 🚀</h1>
+
+    <form id="form" class="space-y-4">
+      <div>
+        <label class="block font-semibold mb-1">Choose Platform</label>
+        <select name="platform"
+            class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400">
+            <option value="codeforces">🌐 Codeforces</option>
+            <option value="codechef">🍽️ CodeChef</option>
+            <option value="atcoder">🧪 AtCoder</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="block font-semibold mb-1">Enter Handle</label>
+        <input type="text" name="handle" placeholder="e.g., tourist" required
+               class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400" />
+      </div>
+
+      <div class="text-center">
+        <button type="submit"
+                class="bg-indigo-600 text-white px-6 py-2 rounded-md hover:bg-indigo-700 transition">
+          Analyze
+        </button>
+      </div>
+    </form>
+
+    <div id="result" class="mt-8"></div>
+
+    <div class="mt-6 hidden" id="chart-container">
+      <canvas id="myChart" width="400" height="200"></canvas>
+    </div>
+  </div>
+
+<footer class="footer mt-auto py-3">
+    <div class="container">
+    <span class="text-muted">SHAID SK - Built with using Python - Flask, javascript, Tailwind CSS and API's.</span>
+    </div>
+</footer>
+<script src="/static/chart.js"></script>
+</body>
+</html>
