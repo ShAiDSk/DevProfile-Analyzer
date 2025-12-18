@@ -1,0 +1,18 @@
+# 1. Secret Keys (NEVER share these)
+.env
+
+# 2. Virtual Environment (Too big to upload)
+venv/
+env/
+
+# 3. Python Compiled Files (Junk)
+__pycache__/
+*.pyc
+
+# 4. System Files (Junk)
+.DS_Store
+Thumbs.db
+
+# 5. IDE Settings (Optional)
+.vscode/
+.idea/
