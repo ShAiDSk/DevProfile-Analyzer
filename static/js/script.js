@@ -294,3 +294,21 @@ function minimizeSearchUI() {
     handleInput.parentElement.classList.add('w-full');
     platformSelect.parentElement.classList.add('w-full', 'md:w-64'); // Limit dropdown width
 }
+
+// --- NAVBAR TOGGLE FOR MOBILE ---
+function toggleMobileMenu() {
+    const menu = document.getElementById('nav-menu');
+    
+    // Toggle between hidden and flex
+    if (menu.classList.contains('hidden')) {
+        menu.classList.remove('hidden');
+        menu.classList.add('flex');
+    } else {
+        // Only hide if we are currently on mobile (window width < 768px)
+        // This prevents the menu from disappearing if you resize the window on desktop
+        if (window.innerWidth < 768) {
+            menu.classList.add('hidden');
+            menu.classList.remove('flex');
+        }
+    }
+}
